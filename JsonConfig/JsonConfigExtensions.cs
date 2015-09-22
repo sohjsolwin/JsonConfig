@@ -24,7 +24,7 @@ namespace JsonConfig.Extensions
                         //Try converting manually a string to int array if that is the types specified.
                         if (typeof(T) == typeof(int[]))
                         {
-                            string[] strTokens = match.Value.ToString().Split(",");
+                            string[] strTokens = match.Value.ToString().Split(',');
                             var convertedVal = Array.ConvertAll<string, int>(strTokens, int.Parse);
                             result = (dynamic)convertedVal;
                         }
